@@ -1,0 +1,60 @@
+.location:after {
+    position: absolute;
+    content: "";
+    left: -38px;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    background-image: url(../../img/Shape.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.clock:after {
+    position: absolute;
+    content: "";
+    left: -38px;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    background-image: url(../../img/clock.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.call:after {
+    position: absolute;
+    content: "";
+    left: -38px;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    background-image: url(../../img/call.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.mail:after {
+    position: absolute;
+    content: "";
+    left: -38px;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    background-image: url(../../img/mail.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.breadAfter:after {
+    position: absolute;
+    content: "/";
+    right: -28px;
+    top: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}

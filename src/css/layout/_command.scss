@@ -1,0 +1,56 @@
+.command {
+    padding: 150px 0;
+
+    @include respondmax(xl1210) {
+        padding: 90px 0;
+    }
+
+    @include respondmax(lg)
+    {
+        padding: 50px 0;
+    }
+
+    h4 {
+        font-size: 65px;
+        text-align: center;
+        color: #264796;
+        margin-bottom: 84px;
+        font-weight: 600;
+
+        @include respondmax(xl1210) {
+            font-size: 44px;
+        }
+
+        @include respondmax(lg) {
+            margin-bottom: 21px;
+        }
+
+        @include respondmax(sm) {
+            font-size: 35px;
+        }
+
+        @include respondmax(md)
+        {
+            font-size: 27px;
+        }
+    }
+
+    &__flex {
+        height: 100%;
+        @extend .DflexBoth;
+    }
+
+    &__boxes {
+        img {
+            max-width: 100%;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 323px;
+
+            @include respondmax(xl1210) {
+                margin-bottom: 123px;
+            }
+        }
+    }
+}

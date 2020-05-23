@@ -1,0 +1,81 @@
+.plan {
+    background-color: #f5f4f4;
+    padding: 92px 0;
+    padding-bottom: 22px;
+    &__boxes {
+        margin-bottom: 70px;
+        background-color: #fff;
+        height: 389px;
+        overflow: hidden;
+        padding: 30px;
+        border-bottom-right-radius: 120px;
+        -webkit-box-shadow: 0 0 9px 1px #707070;
+        -moz-box-shadow: 0 0 9px 1px #707070;
+        box-shadow: 0 0 9px 1px #707070;
+        transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+
+        &:hover {
+            transform: scale(0.9);
+            transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+        }
+        @include respondmax(lg) {
+            height: 316px;
+        }
+        @include respondmax(md) {
+            padding: 10px;
+        }
+        h4 {
+            position: relative;
+            font-size: 38px;
+            color: #000;
+            margin-bottom: 54px;
+
+            @include respondmax(xl1210) {
+                font-size: 30px;
+            }
+
+            @include respondmax(lg) {
+                font-size: 26px;
+            }
+            span {
+                color: #e31e24;
+                margin-right: 5px;
+            }
+            &:after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                bottom: -19px;
+                left: 0;
+                height: 2px;
+                background-color: #878787;
+            }
+        }
+
+        p {
+            font-size: 28px;
+            margin-bottom: 0;
+            height: 218px;
+            overflow: hidden;
+
+            @include respondmax(xl1210) {
+                font-size: 22px;
+            }
+
+            @include respondmax(lg) {
+                font-size: 17px;
+            }
+
+            span {
+                position: relative;
+                float: left;
+                width: 32px;
+                height: 22px;
+                background-image: url(../../img/Group10.png);
+                background-repeat: repeat-x;
+                margin-top: 10px;
+                margin-right: 8px;
+            }
+        }
+    }
+}

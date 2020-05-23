@@ -1,0 +1,226 @@
+.tubesPolimer {
+    position: relative;
+    margin-bottom: 100px;
+    padding: 80px 0;
+    &:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: -100px;
+        width: 100%;
+        height: 3px;
+        background-color: #c4c4c4;
+    }
+
+    &__Top {
+        display: flex;
+        padding-bottom: 130px;
+        &--left {
+            position: relative;
+            display: inline-block;
+            width: 584px;
+
+            &:after {
+                position: absolute;
+                content: "";
+                width: 4px;
+                right: -25px;
+                height: 70%;
+                background-color: #c8c5c5;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -moz-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                -o-transform: translateY(-50%);
+                transform: translateY(-50%);
+            }
+        }
+
+        &--right {
+            display: inline-block;
+            width: calc(100% - 590px);
+            padding-left: 65px;
+
+            h4 {
+                font-size: 50px;
+                font-weight: bold;
+                color: #264796;
+            }
+
+            p {
+                font-size: 35px;
+                color: #000;
+                line-height: 50px;
+            }
+        }
+    }
+
+    &__second {
+        padding: 159px 0;
+        padding-bottom: 77px;
+        background-color: #f5f4f4;
+    }
+
+    &__imgBox {
+        min-height: 584px;
+    }
+
+    &__infoBox {
+        &--top {
+            background-color: #fff;
+            padding: 20px 0;
+            width: 541px;
+            @extend .DflexBoth;
+
+            h4 {
+                width: 73%;
+                text-align: left;
+                font-size: 50px;
+                color: #264796;
+                margin-bottom: 0;
+            }
+
+            top: -80px;
+            position: relative;
+        }
+
+        &--bottom {
+            p {
+                font-size: 27px;
+                color: #fff;
+                span {
+                    position: relative;
+                    float: left;
+                    width: 12px;
+                    height: 22px;
+                    background-image: url(../../img/Group12.png);
+                    background-repeat: repeat-x;
+                    margin-top: 16px;
+                    margin-right: 8px;
+                }
+            }
+
+            background-color: #264796;
+            width: 50%;
+            float: right;
+            bottom: -108px;
+            padding: 15px 30px;
+            height: 461px;
+            overflow: hidden;
+            position: relative;
+        }
+    }
+
+    &__characteristic {
+        &--background {
+            background-color: #f5f4f4;
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            width: 50%;
+            min-height: 594px;
+            object-fit: cover;
+        }
+
+        padding-top: 170px;
+        &--content {
+            padding: 20px 0;
+            width: 49%;
+            display: inline-block;
+            padding-left: 35px;
+            padding-right: 20px;
+
+            h4 {
+                font-size: 50px;
+                color: #264796;
+            }
+
+            p {
+                position: relative;
+                font-size: 27px;
+                color: #264796;
+                padding-left: 15px;
+                padding-left: 27px;
+                &:after {
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    left: 0;
+                    width: 17px;
+                    height: 12px;
+                    background-image: url(../../img/arrows.png);
+                    background-repeat: repeat-x;
+                    margin-right: 8px;
+                    margin-top: 13px;
+                }
+            }
+        }
+    }
+
+    &__flex {
+        display: flex;
+    }
+
+    &__tubesIn {
+        margin-top: 80px;
+        padding-top: 20px;
+        background-color: #f7f6fb;
+
+        &--left {
+            display: inline-block;
+            width: 50%;
+
+            h4 {
+                color: #264796;
+                font-size: 50px;
+                font-weight: bold;
+            }
+
+            p {
+                color: #000;
+                font-size: 28px;
+            }
+        }
+
+        &--right {
+            display: inline-block;
+            width: 49%;
+            padding-left: 30px;
+        }
+
+        &--bottoms {
+            width: 100%;
+            height: 500px;
+            margin-bottom: -100px;
+            background-color: #264796;
+            padding: 20px;
+            overflow: hidden;
+            h4 {
+                color: #fff;
+                font-size: 50px;
+            }
+
+            p {
+                position: relative;
+                font-size: 27px;
+                color: #fff;
+                padding-left: 15px;
+                padding-left: 27px;
+                &:after {
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    left: 0;
+                    width: 12px;
+                    height: 12px;
+                    background-image: url(../../img/Group12.png);
+                    background-repeat: repeat-x;
+                    margin-right: 8px;
+                    margin-top: 13px;
+                }
+            }
+        }
+    }
+}

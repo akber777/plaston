@@ -1,0 +1,71 @@
+.header {
+    @extend .DflexJustify;
+    flex-direction: column;
+    background-color: #f5f4f4;
+    padding-top: 16px;
+
+    .topHeader {
+        @extend .DflexSpace;
+        &__item {
+            position: relative;
+            float: left;
+
+            @include respondmax(xl) {
+                display: none;
+            }
+            &:before {
+                position: absolute;
+                content: "";
+                right: 0;
+                width: 1px;
+                height: 100%;
+                background-color: #000;
+                top: 0;
+                right: -11px;
+            }
+
+            &:not(:last-child) {
+                margin-right: 65px;
+            }
+
+            p {
+                margin-bottom: 0;
+                max-width: 334px;
+                font-size: 16px;
+
+                strong {
+                    display: block;
+                }
+
+                @include respondmax(xl80) {
+                    font-size: 14px;
+                }
+            }
+
+            a {
+                color: #000;
+                text-decoration: none;
+                font-size: 16px;
+                @include respondmax(xl80) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        @include respondmax(xl) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    ul {
+        margin-bottom: 0;
+    }
+
+    &__navigation {
+        background-color: #264796;
+        height: 54px;
+        margin-top: 10px;
+        @extend .DflexAlign;
+    }
+}

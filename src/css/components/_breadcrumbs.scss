@@ -1,0 +1,22 @@
+.breadCrumbs {
+    padding: 66px 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    span {
+        position: relative;
+        font-size: 50px;
+        font-weight: bold;
+        &:not(:last-child) {
+            margin-right: 39px;
+        }
+    }
+
+    .backgroundColor {
+        color: #264796;
+    }
+
+    .backgroundColorRed {
+        color: #e31e24;
+    }
+}

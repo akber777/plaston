@@ -1,0 +1,92 @@
+.about {
+    &__title {
+        h4 {
+            color: #264796;
+            font-size: 50px;
+            margin-bottom: 0;
+            padding: 43px 0;
+            font-weight: 600;
+
+            @include respondmax(xl1210) {
+                font-size: 44px;
+            }
+
+            @include respondmax(lg)
+            {
+                font-size: 35px;
+                padding: 25px 0;
+            }
+
+
+            @include respondmax(sm)
+            {
+                font-size: 25px;
+            }
+        }
+    }
+
+    &__company {
+        padding: 51px 0;
+        background-color: #264796;
+
+        img {
+            padding-bottom: 50px;
+            width: 746px;
+            height: 476px;
+            float: right;
+            padding-left: 55px;
+            border-top-right-radius: 180px;
+            border-bottom-left-radius: 180px;
+            object-fit: cover;
+
+            @include respondmax(xl1310) {
+                width: 546px;
+                height: 364px;
+            }
+
+            @include respondmax(lg) {
+                width: 100%;
+                padding-left: 0;
+            }
+        }
+
+        h4 {
+            position: relative;
+            margin-bottom: 43px;
+            font-size: 65px;
+            color: #fff;
+            font-weight: 600;
+            &:after {
+                position: absolute;
+                content: "";
+                left: 0;
+                bottom: -20px;
+                width: 200px;
+                height: 5px;
+                background-color: #fff;
+
+                @include respondmax(xl1310) {
+                    width: 141px;
+                }
+            }
+
+            @include respondmax(xl1310) {
+                font-size: 41px;
+            }
+        }
+
+        p {
+            color: #fff;
+            font-size: 28px;
+            text-align: left;
+
+            @include respondmax(xl1310) {
+                font-size: 17px;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 38px;
+            }
+        }
+    }
+}

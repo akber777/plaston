@@ -1,0 +1,111 @@
+.company {
+    background-color: #264796;
+    padding: 56px 0;
+
+    &__height2 {
+        height: 360px;
+    }
+
+    &__height3 {
+        height: 454px;
+    }
+
+    &__left {
+        h4 {
+            color: #fff;
+            font-size: 65px;
+            font-weight: bold;
+            margin-bottom: 59px;
+
+            @include respondmax(xl1457) {
+                font-size: 45px;
+            }
+        }
+
+        p {
+            font-size: 33px;
+            color: #fff;
+
+            @include respondmax(xl1457) {
+                font-size: 22px;
+            }
+        }
+
+        a {
+            width: 221px;
+            border-radius: 10px;
+            padding: 0 20px;
+            height: 52px;
+            background-color: #fff;
+            color: #264796;
+            font-size: 30px;
+            transition: all 0.3s;
+            margin-top: 20px;
+
+            @include respondmax(xl1457) {
+                font-size: 22px;
+                height: 40px;
+            }
+            &:hover {
+                transition: all 0.3s;
+                background-color: #000;
+                color: #fff;
+            }
+            @extend .DflexBoth;
+            &:after {
+                position: relative;
+                content: "";
+                float: left;
+                width: 27px;
+                height: 17px;
+                margin-left: 17px;
+                background-image: url(../../img/arrowXX.png);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+
+    &__right {
+        position: relative;
+        float: left;
+        width: 60%;
+        padding: 0 5px;
+        @include respondmax(lg) {
+            display: none;
+        }
+        img {
+            max-height: 100%;
+            width: 100%;
+            height: 845px;
+            max-width: 100%;
+            object-fit: cover;
+        }
+
+        p {
+            background: #fff;
+            padding: 10px;
+        }
+    }
+
+    &__ImgBox {
+        position: relative;
+        float: left;
+        width: 40%;
+        padding: 0 5px;
+        @include respondmax(lg) {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            object-fit: cover;
+        }
+
+        p {
+            background: #fff;
+            padding: 10px;
+        }
+    }
+}

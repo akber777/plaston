@@ -1,0 +1,38 @@
+.partnyor {
+    &__title {
+        padding: 111px 0;
+        background-color: #264796;
+        height: 233px;
+        @extend .DflexAlign;
+        &--in {
+            @extend .DflexAlign;
+            justify-content: space-between;
+
+            @include respondmax(md) {
+                flex-direction: column;
+            }
+            h4 {
+                font-size: 65px;
+                color: #fff;
+
+                @include respondmax(lg) {
+                    font-size: 35px;
+                }
+            }
+
+            img {
+                float: right;
+                width: 165px;
+
+                @include respondmax(md) {
+                    width: 100px;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+
+    &__infos {
+        padding: 125px;
+    }
+}

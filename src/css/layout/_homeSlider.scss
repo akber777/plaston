@@ -1,0 +1,191 @@
+.sliderHome {
+    height: 774px;
+    max-height: 774px;
+
+    @include respondmax(xl1616) {
+        height: 574px;
+    }
+
+    @include respondmax(lg) {
+        height: 374px;
+    }
+
+    @include respondmax(sm) {
+        height: 274px;
+    }
+
+    @include respondmax(sm480) {
+        height: 174px;
+    }
+    .item {
+        @extend .DflexAlign;
+        height: 100%;
+        img {
+            position: absolute;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .homeOwl {
+        height: 100%;
+        .owl-dots {
+            position: absolute;
+            bottom: 52px;
+            width: 100%;
+            @extend .DflexJustify;
+            button {
+                position: relative;
+                float: left;
+                width: 20px;
+                height: 20px;
+                border-radius: 100%;
+                background-color: transparent;
+                border: 1px solid #fff;
+                @extend .DflexBoth;
+                &:not(:last-child) {
+                    margin-right: 15px;
+                }
+            }
+
+            button.active span {
+                position: relative;
+                float: left;
+                width: 10px;
+                height: 10px;
+                background-color: #fff;
+                border-radius: 100%;
+            }
+
+            @include respondmax(lg) {
+                bottom: 18px;
+            }
+        }
+        .owl-nav {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            padding: 0px 35px;
+            @extend .DflexSpace;
+            @include respondmax(lg) {
+                display: none;
+            }
+            .owl-prev {
+                span {
+                    display: none;
+                }
+                width: 35px;
+                height: 55px;
+                background-image: url(../../img/Path15.png);
+                background-repeat: no-repeat;
+                background-position: center;
+
+                @include respondmax(lg) {
+                    background-size: contain;
+                    width: 23px;
+                }
+            }
+            .owl-next {
+                span {
+                    display: none;
+                }
+                width: 35px;
+                height: 55px;
+                background-image: url(../../img/Path16.png);
+                background-repeat: no-repeat;
+                background-position: center;
+
+                @include respondmax(lg) {
+                    background-size: contain;
+                    width: 23px;
+                }
+            }
+        }
+        .owl-stage-outer {
+            height: 100%;
+
+            .owl-stage {
+                height: 100%;
+
+                .owl-item {
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+        z-index: 1;
+        width: 730px;
+        @include respondmax(xl1830) {
+            padding: 0 41px;
+        }
+
+        @include respondmax(xl1080) {
+            width: 100%;
+        }
+
+        @include respondmax(lg) {
+            padding: 0 88px;
+            display: none;
+        }
+
+        p {
+            strong {
+                font-size: 30px;
+                font-weight: 600 !important;
+                position: relative;
+                float: left;
+                margin-bottom: 26px;
+
+                @include respondmax(lg) {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+            }
+            font-size: 30px;
+            color: #fff;
+            font-weight: 100;
+            @include respondmax(lg) {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            a {
+                position: relative;
+                float: left;
+                padding: 5px 18px;
+                border: 1px solid #fff;
+                color: #fff;
+                border-radius: 50px;
+                height: 39px;
+                @extend .DflexAlign;
+                margin-bottom: 0;
+                text-decoration: none;
+                &:after {
+                    position: relative;
+                    content: "";
+                    float: left;
+                    width: 27px;
+                    height: 17px;
+                    margin-left: 10px;
+                    background-image: url(../../img/arrow.png);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+
+            @include respondmax(xl1080) {
+                display: inline-block;
+            }
+        }
+    }
+}
