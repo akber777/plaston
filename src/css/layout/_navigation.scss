@@ -121,6 +121,10 @@ a {
                     display: inline-block;
                     padding: 0.5rem 2rem;
                     font-size: 18px;
+                    @extend .DflexAlign;
+                    svg {
+                        margin-left: 4px;
+                    }
                     &:hover {
                         color: $navbar-link-hover;
                     }
