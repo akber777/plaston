@@ -3,12 +3,28 @@
     display: flex;
     flex-wrap: wrap;
 
+    @include respondmax(lg) {
+        padding: 22px 0;
+    }
+
     span {
         position: relative;
         font-size: 50px;
         font-weight: bold;
         &:not(:last-child) {
             margin-right: 39px;
+        }
+
+        @include respondmax(xl60) {
+            font-size: 32px;
+        }
+
+        @include respondmax(xl1310) {
+            font-size: 25px;
+        }
+
+        @include respondmax(md) {
+            font-size: 19px;
         }
     }
 

@@ -25,7 +25,7 @@ $(document).ready(function () {
         autoplay: true,
         center: true,
         loop: true,
-        nav: true,
+        nav: false,
         margin: 0,
         responsive: {
             0: {

@@ -1,0 +1,57 @@
+.polikarbonat {
+    border-bottom: none !important;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+
+    &:after {
+        display: none;
+    }
+
+    &__boxes {
+        position: relative;
+    }
+
+    &__imgBox {
+        position: relative;
+        &:after {
+            position: absolute;
+            content: "";
+            left: 0;
+            height: 50px;
+            background-color: #264796;
+            z-index: 1;
+            width: 100%;
+            bottom: 0;
+        }
+    }
+
+    &__Top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+
+        &--right {
+            padding-left: 0 !important;
+            padding-right: 50px;
+        }
+
+        &--left {
+            img {
+                max-width: 100%;
+            }
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
+.lastItem {
+    margin-bottom: 150px;
+
+    @include respondmax(md) {
+        margin-bottom: 0;
+    }
+}

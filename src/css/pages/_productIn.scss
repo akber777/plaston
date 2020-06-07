@@ -7,13 +7,55 @@
         border: 4px solid #264796;
         margin-bottom: 60px;
 
+        &:last-child {
+            @include respondmax(md) {
+                margin-bottom: 0;
+            }
+        }
+
         &:not(:nth-child(3n)) {
             margin-right: 187px;
+
+            @include respondmax(xl1457) {
+                margin-right: 100px;
+            }
+
+            @include respondmax(xl80) {
+                margin-right: unset;
+            }
+        }
+
+        &:not(:nth-child(2n)) {
+            @include respondmax(xl80) {
+                margin-right: 50px;
+            }
+
+            @include respondmax(md) {
+                margin-right: 0;
+            }
+        }
+
+        @include respondmax(xl1457) {
+            width: calc((100% / 3) - 68px);
+        }
+
+        @include respondmax(xl80) {
+            width: calc((100% / 2) - 25px);
+        }
+
+        @include respondmax(md) {
+            width: 100%;
+            height: 320px;
         }
 
         img {
             width: 100%;
             height: 340px;
+            object-fit: cover;
+
+            @include respondmax(md) {
+                height: 220px;
+            }
         }
     }
 
@@ -21,11 +63,19 @@
         background-color: #264796;
         height: calc(100% - 340px);
         @extend .DflexBoth;
+
+        @include respondmax(md) {
+            height: calc(100% - 220px);
+        }
         p {
             color: #fff;
             font-size: 35px;
             text-align: center;
             margin-bottom: 0;
+
+            @include respondmax(md) {
+                font-size: 28px;
+            }
         }
     }
 

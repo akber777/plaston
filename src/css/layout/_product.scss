@@ -33,32 +33,33 @@
         }
     }
 
+    h3 {
+        position: relative;
+        float: left;
+        width: 100%;
+        font-size: 40px;
+        color: #000;
+        font-weight: 500;
+        z-index: 1;
+        margin-bottom: 15px;
+        margin-top: 10px;
+
+        @include respondmax(lg) {
+            font-size: 30px;
+        }
+        &:after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: -5px;
+            width: 150px;
+            height: 5px;
+            background-color: #000;
+        }
+    }
+
     p {
         position: relative;
-
-        strong {
-            position: relative;
-            float: left;
-            width: 100%;
-            font-size: 40px;
-            color: #000;
-            font-weight: 500;
-            z-index: 1;
-            margin-bottom: 15px;
-
-            @include respondmax(lg) {
-                font-size: 30px;
-            }
-            &:after {
-                position: absolute;
-                content: "";
-                left: 0;
-                bottom: -5px;
-                width: 150px;
-                height: 5px;
-                background-color: #000;
-            }
-        }
 
         font-size: 22px;
         display: block;

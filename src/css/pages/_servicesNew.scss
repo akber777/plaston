@@ -1,0 +1,129 @@
+.servicesNew {
+    padding: 32px 0;
+
+    @include respondmax(xl) {
+        margin-bottom: 100px !important;
+    }
+    &__content {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        z-index: 5;
+        padding-left: 152px;
+
+        @include respondmax(xl60) {
+            padding-left: 70px;
+        }
+
+        @include respondmax(xl) {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        @include respondmax(md) {
+            padding-left: 13px;
+            padding-right: 13px;
+        }
+
+        h4 {
+            width: 77%;
+            color: #fff;
+            font-size: 50px;
+            font-weight: 600;
+            margin-bottom: 55px;
+            margin-top: 55px;
+
+            @include respondmax(xl60) {
+                font-size: 40px;
+            }
+
+            @include respondmax(xl) {
+                font-size: 25px;
+                margin: 25px 0;
+                width: 100%;
+            }
+
+            @include respondmax(md) {
+                font-size: 23px;
+            }
+        }
+
+        img {
+            position: absolute;
+            width: 69%;
+            right: 0;
+            object-fit: cover;
+
+            @include respondmax(xl) {
+                position: relative;
+                width: 100%;
+            }
+
+            @include respondmax(lg) {
+                max-height: 400px !important;
+            }
+
+            @include respondmax(md) {
+                max-height: 200px !important;
+            }
+        }
+    }
+
+    &__list {
+        float: left;
+        width: 22%;
+
+        @include respondmax(xl) {
+            width: 100%;
+        }
+
+        &--item {
+            position: relative;
+            display: block;
+            font-size: 35px;
+            color: #fff;
+            padding-left: 32px;
+            @include respondmax(xl60) {
+                font-size: 28px;
+            }
+
+            @include respondmax(md) {
+                font-size: 21px;
+            }
+
+            &:after {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 5px;
+                width: 20px;
+                height: 12px;
+                background-image: url(../../img/leftWhite.png);
+                background-repeat: repeat-x;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -moz-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                -o-transform: translateY(-50%);
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__contentTop {
+        margin-bottom: 0;
+    }
+
+    &__absoluteBox {
+        position: absolute;
+        left: 0;
+        width: 80%;
+        background-color: #264796;
+        height: 100%;
+        z-index: -1;
+
+        @include respondmax(xl) {
+            width: 100%;
+        }
+    }
+}

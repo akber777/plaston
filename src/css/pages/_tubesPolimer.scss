@@ -2,6 +2,11 @@
     position: relative;
     margin-bottom: 100px;
     padding: 80px 0;
+
+    @include respondmax(xl1616) {
+        padding-top: 40px;
+    }
+
     &:after {
         position: absolute;
         content: "";
@@ -15,10 +20,31 @@
     &__Top {
         display: flex;
         padding-bottom: 130px;
+
+        @include respondmax(xl1616) {
+            padding-bottom: 45px;
+        }
+
+        @include respondmax(xl80) {
+            flex-direction: column !important;
+        }
+
         &--left {
             position: relative;
             display: inline-block;
             width: 584px;
+
+            img {
+                @include respondmax(xl80) {
+                    width: 100%;
+                    max-height: 250px;
+                    object-fit: cover;
+                }
+            }
+
+            @include respondmax(xl80) {
+                width: 100%;
+            }
 
             &:after {
                 position: absolute;
@@ -33,6 +59,10 @@
                 -ms-transform: translateY(-50%);
                 -o-transform: translateY(-50%);
                 transform: translateY(-50%);
+
+                @include respondmax(xl) {
+                    display: none;
+                }
             }
         }
 
@@ -41,16 +71,47 @@
             width: calc(100% - 590px);
             padding-left: 65px;
 
+            @include respondmax(xl1616) {
+                width: calc(100% - 390px);
+            }
+
+            @include respondmax(xl80) {
+                padding-right: 0 !important;
+                width: 100%;
+                margin-top: 25px;
+            }
+
+            @include respondmax(xl) {
+                padding-left: 0;
+            }
+
             h4 {
                 font-size: 50px;
                 font-weight: bold;
                 color: #264796;
+
+                @include respondmax(xl1616) {
+                    font-size: 37px;
+                }
+
+                @include respondmax(md) {
+                    font-size: 23px;
+                }
             }
 
             p {
                 font-size: 35px;
                 color: #000;
                 line-height: 50px;
+
+                @include respondmax(xl1616) {
+                    font-size: 24px;
+                }
+
+                @include respondmax(md) {
+                    line-height: 28px;
+                    font-size: 16px;
+                }
             }
         }
     }
@@ -72,12 +133,25 @@
             width: 541px;
             @extend .DflexBoth;
 
+            @include respondmax(md) {
+                width: 100%;
+            }
+
             h4 {
                 width: 73%;
                 text-align: left;
                 font-size: 50px;
                 color: #264796;
                 margin-bottom: 0;
+
+                @include respondmax(xl1616) {
+                    font-size: 40px;
+                }
+
+                @include respondmax(md) {
+                    font-size: 26px;
+                    text-align: center;
+                }
             }
 
             top: -80px;
@@ -85,9 +159,28 @@
         }
 
         &--bottom {
+            @include respondmax(xl80) {
+                width: 100%;
+                min-height: unset;
+            }
+
+            @include respondmax(lg) {
+                margin-bottom: 122px;
+            }
+
             p {
+                position: relative;
                 font-size: 27px;
                 color: #fff;
+                padding-left: 15px;
+
+                @include respondmax(xl1616) {
+                    font-size: 22px;
+                }
+
+                @include respondmax(md) {
+                    font-size: 18px;
+                }
                 span {
                     position: relative;
                     float: left;
@@ -97,6 +190,18 @@
                     background-repeat: repeat-x;
                     margin-top: 16px;
                     margin-right: 8px;
+                    display: none;
+                }
+
+                &:after {
+                    position: absolute;
+                    content: "";
+                    left: -12px;
+                    width: 12px;
+                    height: 12px;
+                    background-image: url(../../img/Group12.png);
+                    background-repeat: repeat-x;
+                    top: 9px;
                 }
             }
 
@@ -105,26 +210,40 @@
             float: right;
             bottom: -108px;
             padding: 15px 30px;
-            height: 461px;
-            overflow: hidden;
+            min-height: 480px;
             position: relative;
+            margin-bottom: 180px;
         }
     }
 
     &__characteristic {
         &--background {
+            @include respondmax(xl) {
+                flex-direction: column;
+                width: 100%;
+            }
             background-color: #f5f4f4;
             display: flex;
             align-items: center;
+            width: 100%;
         }
 
         img {
             width: 50%;
-            min-height: 594px;
+            min-height: 250px;
             object-fit: cover;
+
+            @include respondmax(xl) {
+                width: 100%;
+                max-height: 500px;
+            }
         }
 
         padding-top: 170px;
+
+        @include respondmax(md) {
+            padding-top: 98px;
+        }
         &--content {
             padding: 20px 0;
             width: 49%;
@@ -132,9 +251,22 @@
             padding-left: 35px;
             padding-right: 20px;
 
+            @include respondmax(xl) {
+                width: 100%;
+            }
+
+            @include respondmax(md) {
+                padding: 20px 13px 20px 13px;
+            }
+
             h4 {
                 font-size: 50px;
                 color: #264796;
+                font-weight: 600;
+
+                @include respondmax(xl1457) {
+                    font-size: 30px;
+                }
             }
 
             p {
@@ -143,6 +275,15 @@
                 color: #264796;
                 padding-left: 15px;
                 padding-left: 27px;
+
+                @include respondmax(xl1457) {
+                    font-size: 22px;
+                }
+
+                @include respondmax(md) {
+                    font-size: 18px;
+                }
+
                 &:after {
                     position: absolute;
                     content: "";
@@ -161,6 +302,9 @@
 
     &__flex {
         display: flex;
+        @include respondmax(xl) {
+            flex-direction: column;
+        }
     }
 
     &__tubesIn {
@@ -172,15 +316,28 @@
             display: inline-block;
             width: 50%;
 
+            @include respondmax(xl) {
+                width: 100%;
+            }
+
             h4 {
                 color: #264796;
                 font-size: 50px;
                 font-weight: bold;
+                margin-bottom: 25px;
+
+                @include respondmax(xl1457) {
+                    font-size: 35px;
+                }
             }
 
             p {
                 color: #000;
                 font-size: 28px;
+
+                @include respondmax(xl1457) {
+                    font-size: 22px;
+                }
             }
         }
 
@@ -188,18 +345,40 @@
             display: inline-block;
             width: 49%;
             padding-left: 30px;
+
+            @include respondmax(xl) {
+                width: 100%;
+                padding-left: 0;
+            }
+
+            img {
+                width: 100%;
+
+                @include respondmax(xl) {
+                    max-height: 245px;
+                    object-fit: contain;
+                }
+            }
         }
 
         &--bottoms {
             width: 100%;
-            height: 500px;
+            min-height: 500px;
             margin-bottom: -100px;
             background-color: #264796;
             padding: 20px;
             overflow: hidden;
+
+            @include respondmax(xl) {
+                min-height: 300px;
+            }
             h4 {
                 color: #fff;
                 font-size: 50px;
+
+                @include respondmax(xl1457) {
+                    font-size: 35px;
+                }
             }
 
             p {
@@ -208,6 +387,10 @@
                 color: #fff;
                 padding-left: 15px;
                 padding-left: 27px;
+
+                @include respondmax(xl1457) {
+                    font-size: 21px;
+                }
                 &:after {
                     position: absolute;
                     content: "";

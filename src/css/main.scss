@@ -1,5 +1,5 @@
 @import "abstracts/bt5start";
-  
+
 @import "abstracts/function";
 @import "abstracts/mixin";
 @import "abstracts/variables";
@@ -9,13 +9,10 @@
 @import "base/utilities";
 @import "base/fonts";
 
-@import "components/button"; 
-@import "components/after"; 
+@import "components/button";
+@import "components/after";
 @import "components/breadcrumbs";
 @import "components/myTable";
-
-
-
 
 @import "layout/footer";
 @import "layout/header";
@@ -31,17 +28,6 @@
 @import "layout/command";
 @import "layout/iso";
 
-
-
-
-
-
-
-
-
-
-
-
 @import "pages/contact";
 @import "pages/about";
 @import "pages/products";
@@ -52,17 +38,14 @@
 @import "pages/polimer";
 @import "pages/productIn";
 @import "pages/tubesPolimer";
-
-
-
-
-
-
-
-
+@import "pages/polikarbonat";
+@import "pages/polimerAksesuar";
+@import "pages/cabel";
+@import "pages/productContent";
+@import "pages/sendvic";
+@import "pages/servicesNew";
 
 
 
 
 @import "abstracts/bt5end";
-    

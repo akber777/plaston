@@ -135,8 +135,8 @@
     font-style: italic;
 }
 
-body{
-    overflow-x:hidden;
+body {
+    overflow-x: hidden;
 }
 
 .full {
@@ -145,9 +145,19 @@ body{
     width: 100%;
 }
 
-.center{
+.center {
     position: relative;
     float: none;
     width: 1153px;
 
+    @include respondmax(xl1210) {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
+section {
+    position: relative;
+    float: left;
+    width: 100%;
 }

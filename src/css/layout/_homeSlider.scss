@@ -136,19 +136,21 @@
             display: none;
         }
 
-        p {
-            strong {
-                font-size: 30px;
-                font-weight: 600 !important;
-                position: relative;
-                float: left;
-                margin-bottom: 26px;
+        h4 {
+            font-size: 30px;
+            font-weight: 600 !important;
+            position: relative;
+            float: left;
+            margin-bottom: 26px;
+            color: #fff;
 
-                @include respondmax(lg) {
-                    font-size: 20px;
-                    margin-bottom: 10px;
-                }
+            @include respondmax(lg) {
+                font-size: 20px;
+                margin-bottom: 10px;
             }
+        }
+
+        p {
             font-size: 30px;
             color: #fff;
             font-weight: 100;

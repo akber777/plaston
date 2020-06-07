@@ -1,14 +1,34 @@
 .myTable {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    margin-bottom: 75px;
+    padding-bottom: 75px;
+
+    @include respondmax(md) {
+        overflow: scroll;
+        padding-bottom: 40px;
+    }
 
     &__Top {
+        padding-top: 100px;
+
+        @include respondmax(lg) {
+            padding-top: 50px;
+        }
         p {
             display: inline-block;
             width: calc(100% - 400px);
             font-size: 25px;
             text-align: right;
             float: right;
+            padding-left: 20px;
+
+            @include respondmax(lg) {
+                width: 100%;
+                padding-left: 0;
+            }
+
+            @include respondmax(md) {
+                font-size: 19px;
+            }
         }
 
         h4 {
@@ -19,11 +39,19 @@
             font-weight: 300;
             margin-bottom: 40px;
 
+            @include respondmax(lg) {
+                font-size: 25px;
+            }
+
             span {
                 display: block;
                 font-size: 35px;
                 color: #122887;
                 font-weight: 600;
+
+                @include respondmax(lg) {
+                    font-size: 25px;
+                }
             }
 
             &:after {
@@ -43,17 +71,33 @@
             border: 3px solid #e9e9e9;
             display: inline-block;
 
-            img {
+            @include respondmax(lg) {
                 width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: auto;
+                padding-bottom: 41px;
             }
 
-            span {
+            img {
+                width: 100%;
+
+                @include respondmax(lg) {
+                    width: 50%;
+                }
+            }
+
+            strong {
                 position: relative;
                 display: block;
                 font-size: 35px;
                 color: #122887;
                 font-weight: 600;
                 text-align: center;
+                @include respondmax(md) {
+                    font-size: 28px;
+                }
 
                 &:after {
                     position: absolute;
@@ -71,5 +115,140 @@
                 }
             }
         }
+    }
+
+    &__contentTable {
+        position: relative;
+        margin-top: 50px;
+
+        // @include respondmax(md) {
+        //     overflow: scroll;
+        // }
+
+        h4 {
+            margin-bottom: 35px;
+            font-size: 46px;
+            color: #122887;
+
+            @include respondmax(lg) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 25px;
+            }
+
+            img {
+                @include respondmax(lg) {
+                    width: 30% !important;
+                }
+            }
+
+            strong {
+                position: relative;
+                &:after {
+                    position: absolute;
+                    width: 100%;
+                    content: "";
+                    left: 0;
+                    bottom: -11px;
+                    height: 5px;
+                    background-color: #facf3b;
+                }
+            }
+        }
+
+        table {
+            position: relative;
+            &:after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 13px;
+                background-color: #122887;
+                top: 50px;
+                left: 0;
+            }
+        }
+
+        th {
+            font-size: 16px;
+
+            p {
+                font-size: 16px;
+            }
+            position: relative;
+        }
+
+        td,
+        tr {
+            font-size: 18px;
+            color: #122887;
+            position: relative;
+            padding: 15px 0;
+            padding-bottom: 16px !important;
+
+            p {
+                font-size: 18px;
+                color: #122887;
+                margin-bottom: 0;
+                padding-top: 27px;
+                padding-bottom: 0;
+                text-align: center;
+
+                @include respondmax(md) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        tr {
+            &:first-child {
+                background-color: #facf3b !important;
+                padding: 0 !important;
+                vertical-align: center;
+                margin-bottom: 20px;
+                height: 50px !important;
+                min-height: 50px;
+
+                p {
+                    padding: 10px 0 !important;
+                    // display: flex;
+                    // align-items: center;
+                    // justify-content: center;
+
+                    @include respondmax(md) {
+                        padding: 13px 0 !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .table-bordered td,
+    .table-bordered th {
+        padding: 0;
+    }
+
+    &__section {
+        border-bottom: 3px solid #c4c4c4;
+    }
+
+    &__tubess {
+        @include respondmax(md) {
+            width: 100%;
+            overflow: scroll;
+        }
+
+        .table {
+            @include respondmax(md) {
+                width: 800px;
+            }
+        }
+    }
+}
+
+.myTablePoli {
+    @include respondmax(lg) {
+        margin-bottom: 0 !important;
     }
 }

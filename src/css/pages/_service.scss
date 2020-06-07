@@ -71,6 +71,7 @@
             z-index: 5;
             @include respondmax(lg) {
                 font-size: 25px;
+                text-align: center;
             }
 
             @include respondmax(md) {

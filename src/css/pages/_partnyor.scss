@@ -4,6 +4,11 @@
         background-color: #264796;
         height: 233px;
         @extend .DflexAlign;
+
+        @include respondmax(lg) {
+            padding: 41px 0;
+            height: 165px;
+        }
         &--in {
             @extend .DflexAlign;
             justify-content: space-between;
@@ -16,7 +21,10 @@
                 color: #fff;
 
                 @include respondmax(lg) {
-                    font-size: 35px;
+                    font-size: 32px;
+                }
+
+                @include respondmax(md) {
                 }
             }
 
@@ -25,7 +33,7 @@
                 width: 165px;
 
                 @include respondmax(md) {
-                    width: 100px;
+                    width: 48px;
                     margin-top: 15px;
                 }
             }
@@ -34,5 +42,9 @@
 
     &__infos {
         padding: 125px;
+
+        @include respondmax(md) {
+            padding: 20px;
+        }
     }
 }

@@ -5,8 +5,7 @@
         padding: 90px 0;
     }
 
-    @include respondmax(lg)
-    {
+    @include respondmax(lg) {
         padding: 50px 0;
     }
 
@@ -29,8 +28,7 @@
             font-size: 35px;
         }
 
-        @include respondmax(md)
-        {
+        @include respondmax(md) {
             font-size: 27px;
         }
     }
@@ -38,6 +36,10 @@
     &__flex {
         height: 100%;
         @extend .DflexBoth;
+
+        img {
+            max-height: 114px;
+        }
     }
 
     &__boxes {

@@ -1,0 +1,57 @@
+.sendvic {
+    margin-bottom: 80px;
+
+    &__title {
+        font-size: 50px;
+        font-weight: bold;
+        color: #122887;
+        margin-bottom: 20px;
+
+        @include respondmax(lg) {
+            font-size: 35px;
+        }
+    }
+    &__list {
+        li {
+            display: flex;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            span:first-child {
+                display: inline-block;
+                font-size: 25px;
+                background-color: #f7f6fb;
+                color: #000;
+                padding: 5px 10px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                min-width: 200px;
+
+                @include respondmax(lg) {
+                    font-size: 18px;
+                    width: 50%;
+                    min-width: unset;
+                }
+            }
+
+            span:last-child {
+                display: flex;
+                font-size: 25px;
+                background-color: #122887;
+                color: #fff;
+                padding: 5px 10px;
+                min-width: 300px;
+                height: 40px;
+                align-items: center;
+
+                @include respondmax(lg) {
+                    font-size: 18px;
+                    width: 50%;
+                    min-width: unset;
+                }
+            }
+        }
+    }
+}

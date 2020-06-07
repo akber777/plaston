@@ -1,0 +1,53 @@
+.productContent {
+    &__polimer {
+        margin-bottom: 0;
+        padding-bottom: 0;
+
+        &:after {
+            display: none;
+        }
+
+        .tubesPolimer__Top {
+            padding-bottom: 40px;
+        }
+    }
+
+    // &__titleBox {
+    //     margin-top: 137px;
+    // }
+
+    &__title {
+        font-size: 35px;
+        font-weight: bold;
+        color: #122887;
+
+        @include respondmax(md) {
+            font-size: 28px;
+        }
+    }
+
+    &__Imgbox {
+        height: 319px;
+        background-repeat: no-repeat;
+        margin-bottom: 75px;
+
+        @include respondmax(lg) {
+            margin-bottom: 20px;
+            height: 175px;
+        }
+    }
+
+    &__table {
+        .myTable {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    &__charasterictic {
+        padding-top: 0;
+    }
+
+    &__tubesPolimerEnd {
+        margin-bottom: 0;
+    }
+}

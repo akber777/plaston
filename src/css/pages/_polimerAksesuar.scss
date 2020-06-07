@@ -1,0 +1,10 @@
+.polimerAksesuar {
+    &__characteristic {
+        padding: 25px 0;
+        background-color: #fff;
+
+        .tubesPolimer__characteristic--content {
+            background-color: #f5f4f4;
+        }
+    }
+}
